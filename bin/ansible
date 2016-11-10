@@ -1,3 +1,10 @@
-git clone git://github.com/ansible/ansible.git
-cd ansible
-ls -la *
+
+
+install_ansible() 
+{
+	local buildDir=${1}
+	ANSIBLE_INSTALL_DIR="${buildDir}"/.ansible
+	cd $ANSIBLE_INSTALL_DIR
+	git clone git://github.com/ansible/ansible.git
+	ls -la *
+}
