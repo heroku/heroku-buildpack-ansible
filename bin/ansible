@@ -6,9 +6,5 @@ install_ansible()
 	
 	cd /tmp
 	git clone git://github.com/ansible/ansible.git
-
-	ANSIBLE_INSTALL_DIR=/tmp/ansible	
-	export PATH=$ANSIBLE_INSTALL_DIR/bin:$PATH
-	
-	echo "ansible has been installed at $(cd $(dirname $ANSIBLE_INSTALL_DIR); pwd)" 
+	echo "ansible has been installed at /tmp/ansible"
 }

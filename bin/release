@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cat <<EOF
+---
+config_vars:
+  PATH: /tmp/ansible/bin:bin:/usr/local/bin:/usr/bin:/bin  
+EOF
