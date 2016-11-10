@@ -1,9 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash -e
 
-echo "compile!"
+export BUILD_DIR=$1
 
-BUILD_DIR=$1
-CACHE_DIR=$2
-ENV_DIR=$3
+BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
+. $BIN_DIR/ansible
 
-. $BUILD_DIR/bin/ansible
+install_ansible ${BUILD_DIR}
