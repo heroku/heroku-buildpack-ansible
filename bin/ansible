@@ -3,9 +3,10 @@
 install_ansible() 
 {
 	local buildDir=${1}
-	ANSIBLE_INSTALL_DIR="${buildDir}"/.ansible
-	cd $ANSIBLE_INSTALL_DIR
+	cd /tmp
 	git clone git://github.com/ansible/ansible.git
+
+	ANSIBLE_INSTALL_DIR=/tmp/ansible	
 	export PATH=$ANSIBLE_INSTALL_DIR/bin:$PATH
 	
 	ls -la *
