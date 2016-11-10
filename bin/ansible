@@ -11,5 +11,5 @@ install_ansible()
 	export PATH=$ANSIBLE_INSTALL_DIR/bin:$PATH
 	
 	ls -la $ANSIBLE_INSTALL_DIR/*
-	$ANSIBLE_INSTALL_DIR/ansible
+	$ANSIBLE_INSTALL_DIR/bin/ansible
 }
