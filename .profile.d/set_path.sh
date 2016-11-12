@@ -1,2 +1,2 @@
 #!/bin/sh
-export PATH="/tmp/ansible/bin:$PATH"
+export PATH="/ansible/bin:$PATH"

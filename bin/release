@@ -3,5 +3,5 @@
 cat <<EOF
 ---
 config_vars:
-  PATH: ./ansible/bin:bin:/usr/local/bin:/usr/bin:/bin  
+  PATH: /ansible/bin:bin:/usr/local/bin:/usr/bin:/bin  
 EOF
