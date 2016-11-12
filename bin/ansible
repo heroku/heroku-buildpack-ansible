@@ -3,5 +3,6 @@ install_ansible()
 	local buildDir=${1}
 		
 	git clone git://github.com/ansible/ansible.git
-	echo "ansible has been installed at $(cd ./ansible; pwd)"	
+	mv ansible $buildDir/
+	echo "ansible has been installed at $(cd $buildDir/ansible; pwd)"	
 }
