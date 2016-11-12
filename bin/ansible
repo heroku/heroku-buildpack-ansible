@@ -1,10 +1,7 @@
-
-
 install_ansible() 
 {
 	local buildDir=${1}
-	
-	cd $HOME
+		
 	git clone git://github.com/ansible/ansible.git
-	echo "ansible has been installed at /tmp/ansible"
+	echo "ansible has been installed at $(cd ./ansible; pwd)"	
 }
