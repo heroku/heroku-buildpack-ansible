@@ -1,2 +1,2 @@
 #!/bin/sh 
-export PATH="/app/tmp/cache/ansible/bin:$PATH"
+export PATH="/app/.heroku/ansible/bin:$PATH"

@@ -1,8 +1,6 @@
 #!/bin/sh
 
-cat <<EOF
----
-config_vars:
-  PATH: /app/tmp/cache/ansible/bin:bin:/usr/local/bin:/usr/bin:/bin 
-  KEY: value 
+cat << EOF
+addons: []
+default_process_types: {}
 EOF
