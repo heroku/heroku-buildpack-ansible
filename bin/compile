@@ -16,8 +16,8 @@ install_ansible $CACHE_DIR
 ls -la ${BUILD_DIR}
 ls -la ${BUILD_DIR}/.profile.d
 	
-#profileScript="${BUILD_DIR}/.profile.d/set_ansible_path.sh"
-#mkdir -p $(dirname $profileScript)
-#cat << EOF > $profileScript
-#export PATH="/app/tmp/cache/ansible/bin:$PATH"
-#EOF
+profileScript="${BUILD_DIR}/.profile.d/set_ansible_path.sh"
+mkdir -p $(dirname $profileScript)
+cat << EOF > $profileScript
+export PATH="/app/tmp/cache/ansible/bin:$PATH"
+EOF
