@@ -19,5 +19,5 @@ install_ansible()
   	export PATH="$ANSIBLE_DIR/bin:$PATH"
   	echo "PATH=$PATH"
 	echo "-----> ansible installed at $ANSIBLE_DIR"
-	ansible -h
+	ansible-playbook
 }
