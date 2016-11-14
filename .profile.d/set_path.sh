@@ -1,3 +1,2 @@
-#!/bin/sh
-echo "setting PATH=\"/app/tmp/cache/ansible/bin:$PATH\"" 
+#!/bin/sh 
 export PATH="/app/tmp/cache/ansible/bin:$PATH"
