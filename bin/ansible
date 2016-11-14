@@ -1,7 +1,7 @@
 install_ansible() 
 {
 	TARGET_DIR=${1}
-	ANSIBLE_DIR=$TARGET_DIR/ansible/
+	ANSIBLE_DIR=$TARGET_DIR/ansible
 	echo "Installing ansible to $ANSIBLE_DIR"
 	
 	
@@ -13,6 +13,8 @@ install_ansible()
 	[ -d $ANSIBLE_DIR ] && echo "removing $ANSIBLE_DIR"; rm -fr $ANSIBLE_DIR/
 	cp -R ansible $TARGET_DIR
 	chmod +x $ANSIBLE_DIR/bin/*
+  	
+  	ls -la $ANSIBLE_DIR/bin/ansible
   	
   	export PATH="$ANSIBLE_DIR/bin:$PATH"
   	echo "PATH=$PATH"
