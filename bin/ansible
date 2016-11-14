@@ -8,8 +8,13 @@ install_ansible()
 	git clone git://github.com/ansible/ansible.git
 	cp -R ansible $TARGET_DIR
 	chmod +x $ANSIBLE_DIR/bin/*
-	
+	echo "***"
+	ls -la $ANSIBLE_DIR
+	echo "***"
+	ls -la $TARGET_DIR
+	echo "***"
   	export PATH="$ANSIBLE_DIR/bin:$PATH"
   	echo "PATH=$PATH"
 	echo "ansible has been installed at $ANSIBLE_DIR"	
+	ansible
 }
