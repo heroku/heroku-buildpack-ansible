@@ -14,10 +14,8 @@ install_ansible()
 	cp -R ansible $TARGET_DIR
 	chmod +x $ANSIBLE_DIR/bin/*
   	
-  	ls -la $ANSIBLE_DIR/bin/ansible
+  	#ls -la $ANSIBLE_DIR/bin/ansible
   	
-  	export PATH="$ANSIBLE_DIR/bin:$PATH"
-  	echo "PATH=$PATH"
+  	export PATH="$ANSIBLE_DIR/bin:$PATH"  	
 	echo "-----> ansible installed at $ANSIBLE_DIR"
-	ansible-playbook
 }
