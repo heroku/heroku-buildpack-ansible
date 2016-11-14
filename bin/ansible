@@ -10,5 +10,6 @@ install_ansible()
 	ANSIBLE_DIR=$HEROKU_DIR/ansible/
 	chmod +x $ANSIBLE_DIR/bin/*
   	export PATH="$ANSIBLE_DIR/bin:$PATH"
+  	echo "PATH=$PATH"
 	echo "ansible has been installed at $ANSIBLE_DIR"	
 }
