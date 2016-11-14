@@ -3,7 +3,7 @@ install_ansible()
 	local buildDir=${1}
 	HEROKU_DIR=$buildDir/.heroku/
 	
-	pwd
+	cd /tmp
 	git clone git://github.com/ansible/ansible.git
 	mv ansible $HEROKU_DIR
 	
