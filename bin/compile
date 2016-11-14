@@ -17,15 +17,8 @@ ls -la $ENV_DIR
 
 install_ansible $BUILD_DIR
 
-	
-profileScript="${BUILD_DIR}/.profile.d/ansible_set_path.sh"
-mkdir -p $(dirname $profileScript)
-cat << EOF > $profileScript
-export PATH="$BUILD_DIR/.ansible/bin:$PATH"
-EOF
-
-ls -la ${BUILD_DIR}
-ls -la ${BUILD_DIR}/.profile.d
+ls -la $BUILD_DIR
+ls -la $BUILD_DIR/.profile.d
 
 cat $BUILD_DIR/.profile.d/default-proc-warning.sh
 cat $BUILD_DIR/.profile.d/jdbc.sh
