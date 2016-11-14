@@ -2,8 +2,7 @@ install_ansible()
 {
 	BUILD_DIR=${1}
 	ANSIBLE_DIR=$HOME/.ansible
-	echo "-----> Installing ansible to $ANSIBLE_DIR"
-	
+	echo "-----> Installing ansible to $ANSIBLE_DIR"	
 	
 	cd /tmp
 	#[ -d ansible/ ] && echo "-----> removing temp ansible"; rm -fr ansible/ 
@@ -18,8 +17,11 @@ install_ansible()
   	PROFILE_SCRIPT="${BUILD_DIR}/.profile.d/ansible_set_path.sh"
   	echo "-----> adding $PROFILE_SCRIPT"
 	mkdir -p $(dirname $PROFILE_SCRIPT)
+	
 	cat << EOF > $PROFILE_SCRIPT
 	export PATH="$HOME/.ansible/bin:$PATH"
 	EOF
+	
 	echo "-----> ansible installed at $ANSIBLE_DIR"
+	
 }
