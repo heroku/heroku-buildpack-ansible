@@ -12,3 +12,11 @@ BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
 ls -la $ENV_DIR
 
 install_ansible $CACHE_DIR
+
+ls -la ${BUILD_DIR}
+	
+profileScript="${BUILD_DIR}/.profile.d/set_ansible_path.sh"
+mkdir -p $(dirname $profileScript)
+cat << EOF > $profileScript
+export PATH="/app/tmp/cache/ansible/bin:$PATH"
+EOF
