@@ -5,15 +5,22 @@ install_ansible()
 	echo "Installing ansible to $ANSIBLE_DIR"
 	
 	cd /tmp
-	[ -d ansible/ ] && echo "removing old ansible" && rm -fr ansible/ 
+	[ -d ansible/ ] && echo "removing temp ansible"; rm -fr ansible/ 
+	
 	git clone git://github.com/ansible/ansible.git
+	ls -la ansible/
+	echo "***"
+		
+	[ -d $ANSIBLE_DIR ] && echo "removing $ANSIBLE_DIR"; rm -fr $ANSIBLE_DIR/
 	cp -R ansible $TARGET_DIR
 	chmod +x $ANSIBLE_DIR/bin/*
+	
 	echo "***"
 	ls -la $ANSIBLE_DIR
 	echo "***"
 	ls -la $TARGET_DIR
 	echo "***"
+  	
   	export PATH="$ANSIBLE_DIR/bin:$PATH"
   	echo "PATH=$PATH"
 	echo "ansible has been installed at $ANSIBLE_DIR"	
