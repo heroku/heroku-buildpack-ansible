@@ -2,7 +2,7 @@ install_ansible()
 {
 	TARGET_DIR=${1}
 	ANSIBLE_DIR=$TARGET_DIR/ansible/
-	echo "Installing ansible to $BUILD_DIR"
+	echo "Installing ansible to $ANSIBLE_DIR"
 	
 	cd /tmp
 	[ -d ansible/ ] && echo "removing old ansible" && rm -fr ansible/ 
