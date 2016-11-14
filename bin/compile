@@ -6,18 +6,22 @@ export BUILD_DIR=$1
 export CACHE_DIR=$2
 export ENV_DIR=$3
 
+echo "-----> BUILD_DIR=$BUILD_DIR"
+echo "-----> CACHE_DIR=$CACHE_DIR"
+echo "-----> ENV_DIR=$ENV_DIR"
+
 BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
 . $BIN_DIR/ansible
 
 ls -la $ENV_DIR
 
-install_ansible $CACHE_DIR
+install_ansible $BUILD_DIR
 
 	
-profileScript="${BUILD_DIR}/.profile.d/set_ansible_path.sh"
+profileScript="${BUILD_DIR}/.profile.d/ansible_set_path.sh"
 mkdir -p $(dirname $profileScript)
 cat << EOF > $profileScript
-export PATH="/app/tmp/cache/ansible/bin:$PATH"
+export PATH="$BUILD_DIR/.ansible/bin:$PATH"
 EOF
 
 ls -la ${BUILD_DIR}
