@@ -9,4 +9,4 @@ export ENV_DIR=$3
 BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
 . $BIN_DIR/ansible
 
-install_ansible $build_dir
+install_ansible $BUILD_DIR
