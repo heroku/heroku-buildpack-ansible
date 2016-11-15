@@ -4,18 +4,12 @@ install_ansible()
 	ANSIBLE_DIR=$BUILD_DIR/.ansible
 	echo "-----> Installing ansible to $ANSIBLE_DIR"	
 	
-	cd /tmp
-	#[ -d ansible/ ] && echo "-----> removing temp ansible"; rm -fr ansible/ 
-	
+	cd /tmp	
 	git clone git://github.com/ansible/ansible.git
-		
-	[ -d $ANSIBLE_DIR ] && echo "-----> removing $ANSIBLE_DIR"; rm -fr $ANSIBLE_DIR/
+			
 	mkdir -p $ANSIBLE_DIR
 	cp -R ansible/* $ANSIBLE_DIR
 	chmod +x $ANSIBLE_DIR/bin/*
-  	  	
-  
-	
+
 	echo "-----> ansible installed at $ANSIBLE_DIR"
-	
 }

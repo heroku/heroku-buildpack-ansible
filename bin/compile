@@ -13,8 +13,6 @@ echo "-----> ENV_DIR=$ENV_DIR"
 BIN_DIR=$(cd $(dirname $0); pwd) # absolute path
 . $BIN_DIR/ansible
 
-ls -la $ENV_DIR
-
 install_ansible $BUILD_DIR
 
 
@@ -25,6 +23,3 @@ mkdir -p $(dirname $PROFILE_SCRIPT)
 cat << EOF > $PROFILE_SCRIPT
 export PATH="$HOME/.ansible/bin:$PATH"
 EOF
-	
-ls -la $BUILD_DIR
-ls -la $BUILD_DIR/.profile.d
